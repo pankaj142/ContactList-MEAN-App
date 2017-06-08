@@ -1,0 +1,7 @@
+
+1) on command prompt, goto the app folder then run server 
+      using command =>	node server
+
+2) then run mongoDB 
+      using command =>  mongod
+3) then in browser open => localhost:3000

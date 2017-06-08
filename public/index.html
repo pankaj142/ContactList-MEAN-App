@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <title>Contact List App</title>
+        <meta charset="utf-8">
+        <meta name="description"  content="contact list app">
+        <meta name="keywords" content="MEAN app, Contact list app">
+        <meta name="author" content="PanKaj Agham">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+        <style>
+                background: #ffff80;
+            }
+            h1{
+                text-align: center;
+                font-size: 40px;
+                
+            }
+            .table{
+                background: #e6ffff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container" ng-controller="myController">
+        <h1>Contact List App</h1>
+
+        <table class="table">
+            <thead>
+                <hr>
+                <th>Name</th>
+                <th>email</th>
+                <th>Number</th>
+                <th> Action</th>
+                <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input class="form-control" ng-model="contact.name"></td>
+                    
+                    <td><input class="form-control" ng-model="contact.email"></td>
+                    <td><input class="form-control" ng-model="contact.number"></td>
+                    <td><button class="btn btn-primary" ng-click="addContact()">Add Contact</button></td>
+                    <td><button class="btb btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;
+                        <button class="btn btn-info" ng-click="deselect()">Clear</button>
+                    </td>
+                </tr>
+                <tr ng-repeat="contact in contactList">  
+                    <td>{{contact.name}}</td>
+                    <td>{{contact.email}}</td>
+                    <td>{{contact.number}}</td>
+                    <td><button class="btn btn-danger" ng-click="remove(contact._id)">
+                            remove</button></td>
+                    <td><button class="btn btn-warning" ng-click="edit(contact._id)">Edit</button></td>        
+                    
+                </tr>
+            </tbody>
+            
+        </table>
+
+        <p>Tip: After adding contact, please refresh the app to see the updated list.</p>
+        </div>
+        
+       
+       
+         <script src="controllers/controller.js"></script>    
+    </body>
+</html>
