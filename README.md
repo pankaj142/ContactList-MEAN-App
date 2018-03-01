@@ -8,7 +8,6 @@ A service that allow user to maintain contacts.
 * User can add/delete/update contact to list.
 
 # Technologies
-
 * AngularJS
 * NodeJS
 * Expressjs
