@@ -1,4 +1,3 @@
-
 var express =require('express');
 var mongojs =require('mongojs');
 var db = mongojs('contactlist',['contactlist']);
